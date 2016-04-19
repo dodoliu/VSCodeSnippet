@@ -1,0 +1,23 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>KoGetJSON</Title>
+    <Author>LIU</Author>
+    <Shortcut>KoGetJSON</Shortcut>
+    <Description>Ko GetJSON Function</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="JavaScript"><![CDATA[
+                self.objArray = ko.observableArray();
+                self.GetObjArray = function () {
+                    $end$.getJSON(self.urls.GetObjArray, {param1:param1}, function (result) {
+                        if (result.IsSuccess) {
+                            self.objArray(result.ResultData.Result);
+                        }
+                    });
+                };
+]]></Code>
+  </Snippet>
+</CodeSnippet>

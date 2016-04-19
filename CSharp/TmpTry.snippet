@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2015/CodeSnippet">
+     <CodeSnippet Format="1.0.0">
+         <Header>
+             <Title>TmpTry</Title>
+             <Shortcut>TmpTry</Shortcut>
+             <Description>定义包括写log的try块</Description>
+             <Author>LIU</Author>
+             <SnippetTypes>
+                 <SnippetType>Block</SnippetType>
+             </SnippetTypes>
+         </Header>
+         <Snippet>
+             <Code Language="csharp">
+                 <![CDATA[
+	        try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                ex.Data["Method"] = "TmpTry";
+                new ExceptionHelper().LogException(ex);
+            }
+				 ]]>
+             </Code>
+         </Snippet>
+     </CodeSnippet>
+ </CodeSnippets>		

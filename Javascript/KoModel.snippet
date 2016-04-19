@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2015/CodeSnippet">
+     <CodeSnippet Format="1.0.0">
+         <Header>
+             <Title>KoModel</Title>
+             <Shortcut>KoModel</Shortcut>
+             <Description>定义一个Ko的JS对象</Description>
+             <Author>LIU</Author>
+             <SnippetTypes>
+                 <SnippetType>Expansion</SnippetType>
+             </SnippetTypes>
+         </Header>
+         <Snippet>
+             <Code Language="JavaScript">
+                 <![CDATA[
+			var KoModel = function () {
+                var self = this;
+                self.urls = {
+
+                };
+
+                self.Init = function () {
+
+                };
+
+                ko.computed(function () {
+                    self.Init();
+                });
+
+            };
+            ko.applyBindings(new KoModel());
+				 ]]>
+             </Code>
+         </Snippet>
+     </CodeSnippet>
+ </CodeSnippets>		
+ 
+ 

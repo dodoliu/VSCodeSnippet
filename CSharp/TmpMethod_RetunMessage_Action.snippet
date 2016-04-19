@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2015/CodeSnippet">
+     <CodeSnippet Format="1.0.0">
+         <Header>
+             <Title>TmpMethod_RetunMessage_Action</Title>
+             <Shortcut>TmpMethod_RetunMessage_Action</Shortcut>
+             <Description>定义一个ReturnMessage 的 Public Action,没有参数</Description>
+             <Author>LIU</Author>
+             <SnippetTypes>
+                 <SnippetType>Method</SnippetType>
+             </SnippetTypes>
+         </Header>
+         <Snippet>
+             <Code Language="csharp">
+                 <![CDATA[
+				 public JsonResult TmpMethod()
+        {
+            ReturnMessage rm = new ReturnMessage();
+            try
+            {
+
+
+            }
+            catch (Exception ex)
+            {
+                rm.IsSuccess = false;
+                ex.Data["Method"] = "TmpMethod";
+                new ExceptionHelper().LogException(ex);
+            }
+            return MyJson(rm);
+        }
+				 ]]>
+             </Code>
+         </Snippet>
+     </CodeSnippet>
+ </CodeSnippets>
